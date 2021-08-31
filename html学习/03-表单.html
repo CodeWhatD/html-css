@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="url" method="GET" name="name1">
+  用户名<input type="text" name="username"><br>
+  密码 <input type="password" name="pwd"><br>
+    <!--  radio 想要实现单选要设置相同的name value设置好之后后台就能得到值了就是这个value -->
+  性别 男 <input type="radio" name="gender" value="男"> 女 <input type="radio" name="gender" value="女"><br>
+  爱好 篮球 <input type="checkbox" name="hobby"> 音乐 <input type="checkbox" name="hobby">
+    <!--  checked 是给radio和checkbox 设置的，默认页面加载默认选中的  -->
+    <input type="submit" value="提交">
+    <!-- 重置按钮  -->
+    <input type="reset" value="重新设置">
+</form>
+</body>
+</html>
