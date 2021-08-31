@@ -12,7 +12,19 @@
         .red {
             color: rebeccapurple;
         }
-
+        /*  多类名用空格来分割 如果有一个统一的样式可以写在一个类中之后使用的时候给他们这个类则就有这个样式 */
+        .font35 {
+            font-size: 35px;
+        }
+        /*  id选择器  */
+        #selectid {
+            color: aqua;
+        }
+        /*  通配符选择器  */
+        * {
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
@@ -28,5 +40,13 @@
     <li>4</li>
     <li>5</li>
 </ul>
+<!-- 多类名使用 -->
+<div class="red font35">
+    多类名使用
+</div>
+<!-- id选择器 -->
+<div id="selectid">
+    我是ID选择的
+</div>
 </body>
 </html>
