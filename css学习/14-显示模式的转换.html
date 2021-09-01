@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*为了扩大a标签的点击范围,开发中也比较常见,可以将显示方式设置为块级这样就可以设置宽高了*/
+        a {
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-color: pink;
+        }
+
+        /*将块级元素转换为行内元素 display:inline*/
+        div {
+            display: inline;
+            background-color: skyblue;
+        }
+
+        span {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            background-color:darkcyan;
+        }
+    </style>
+</head>
+<body>
+<a href="#">点击</a>
+<div>你好</div>
+<div>你好1</div>
+<span>行内元素转换为行内块级元素</span>
+</body>
+</html>
