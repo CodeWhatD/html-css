@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*元素1 元素2 用空格隔开，这就是后代选择器*/
+        ol li {
+            color: palegoldenrod;
+        }
+        ol li a {
+            color: red;
+        }
+        .ullist li a{
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+<!--后代选择器 可以选择某个父元素之中的子元素-->
+<ol>
+    <li>1</li>
+    <li>2</li>
+    <li>3 <a href="#">孙子</a></li>
+</ol>
+<ul class="ullist">
+    <li>1</li>
+    <li>2</li>
+    <li>3 <a href="#">1</a> </li>
+    <li>4 <a href="#">2</a> </li>
+    <li>5 <a href="#">3</a> </li>
+</ul>
+</body>
+</html>
