@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            color: red;
+        }
+        div {
+            color: pink;
+        }
+        /*
+          这种给同一个选择器设置样式会采用层叠样式，哪个样式离结构最近则采取哪个样式 这里这个颜色为pink的离下面结构最近
+          如果离的远的那个设置了字体大小 离的近的那个没有那么字体大小样式也会生效，它只是会覆盖一样的
+        */
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+</html>
