@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 700px;
+            height: 700px;
+            /*默认就是这个transparent 透明色*/
+            /*background-color: transparent;*/
+            /*url 或者none*/
+            background-image: url("../img/捕获.PNG");
+            /*no-repeat不让图片进行平铺，repeat-x 沿着x轴 repeat-y 沿着y轴*/
+            background-repeat: no-repeat;
+            /*很重要的 background-position: x y 先是水平然后后是垂直
+                可以是方位名词 right left 这种也可以是像素值可以调整图片
+                在盒子中的位置 这里图片引用的不好例子不明显
+                这个顺序无所谓 因为比如你第一个是center 程序不会识别是水平
+                还是垂直的 然后看第二个如果是top那么肯定是y轴的那么刚才那个center
+                就是x轴的 开发中一般是一个页面的超大背景，可以使重要内容显示在屏幕中央
+                如果设置的是像素大小 那么第一个一定是水平的参数，第二个一定是垂直的参数
+                也可以混合单位的写法 background-position:20px,center x20 y垂直
+            */
+            background-position: center,top;
+            /*background-attachment 主要用于做固定背景图片的，默认是随内容的变化而变化*/
+            background-attachment: fixed;
+            /*background 简写没有特定的顺序*/
+        }
+        .tr {
+            background: rgba(0,0,0,0.5);
+            /*a也就是透明度，最后一个参数就是设置当前背景的透明度为多少 最后一个也可以简写 比如是0.3 可以写成.3*/
+        }
+    </style>
+</head>
+<body>
+<div>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<!--半透明样式的练习-->
+<div class="tr">
+
+</div>
+</body>
+</html>
