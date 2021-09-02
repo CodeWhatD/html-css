@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 100px;
+            height: 50px;
+        }
+        table td {
+            border: 1px solid black;
+            border-collapse:collapse;
+        }
+        /*
+        如果表格中单元格td的边框设置为1，那么相邻的表格边框会加在一起会比最边上的粗那么我们需要设置border-collapse属性
+        将相邻的两个边框合并相邻边框 比如都是1 会加起来 设置之后变成1
+        */
+    </style>
+</head>
+<body>
+<table align="center" cellspacing="0">
+    <thead>
+        <tr>
+            <td>姓名</td>
+            <td>年龄</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>杜梦越</td>
+            <td>18</td>
+        </tr>
+    </tbody>
+
+</table>
+</body>
+</html>
