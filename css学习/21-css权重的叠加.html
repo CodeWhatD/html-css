@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*权重为 0,0,0,1*/
+        li {
+            color: red;
+        }
+        /*权重为 0,0,0,1 + 0,0,0,1*/
+        ul li {
+            color: darkcyan;
+        }
+        /*权重 0,0,1,0 + 0,0,0,1  = 0,0,1,1 比较权重会从左往右比较 */
+        .ullist li {
+            color: skyblue;
+        }
+        /*伪类是0,0,1,0*/
+    </style>
+</head>
+<body>
+<ul class="ullist">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</body>
+</html>
