@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .one {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /*前提盒子是正方形*/
+            /*若想实现一个圆形，只要将border-radius设置为宽度高度的一半*/
+            /*border-radius: 100px;*/
+            /*简单写法 如果宽高除2不行直接设置50%*/
+            border-radius: 50%;
+        }
+        .two {
+            width: 400px;
+            height: 200px;
+            /*圆角矩形只要设置高度的一半即可*/
+            border-radius: 100px;
+            background-color: palegreen;
+        }
+        .three {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+            /*border可以设置四个值 也是顺时针*/
+            border-radius: 10px 20px 30px 40px;
+        }
+    </style>
+</head>
+<body>
+<div class="one">圆形</div>
+<br>
+<div class="two">圆角矩形</div>
+<br>
+<div class="three">四个值</div>
+</body>
+</html>
