@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 外边距塌陷情况是一个父盒子给了一个外边距然后里面的子盒子也想给一个外边距，这时候因为子盒子贴父盒子太近那么就会
+           造成子盒子并没有给到外边距而是父盒子会将子盒子给的外边距合并
+
+           解决办法：
+           1.给一个边框使父盒子和子盒子有点距离
+           2.给父盒子一个内边距
+           3.给父盒子设置overflow:hidden
+        */
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            margin-top: 50px;
+
+            /*解决办法1 给一个边框 可以是透明色的 transparent*/
+            /*border-top: 1px solid transparent; */
+
+            /*解决办法2 给一个内边距，使父盒子边上和子盒子有点距离*/
+            /*padding-top: 1px;*/
+
+            /*解决办法3 这个办法可以不受边距，内边距带来的盒子大小改变 就是给一个overflow:hidden*/
+            overflow: hidden;
+        }
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son">
+
+    </div>
+</div>
+</body>
+</html>
