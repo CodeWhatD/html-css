@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            display: inline-block;
+            width: 200px;
+            height: 350px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .box img {
+            /*让图片和父盒子一样宽，这样不会超出父盒子宽度*/
+            width: 100%;
+            height: 100px;
+        }
+        .box p {
+            /*
+                首先p标签我们没有设置宽度，所以设置padding左右是不会撑开盒子的
+                其次上边距我们想离上面有一点距离，这里用padding不好因为我们设置了高度所以会撑开盒子
+                我们可以用margin这样就不会撑开盒子了
+            */
+            height: 42px;
+            margin-top: 30px;
+            padding: 0 10px;
+        }
+        .personapprise {
+            margin-top: 100px;
+            margin-left: 7px;
+            font-size: 3px;
+            color: #b0b0b0;
+        }
+        a {
+            text-decoration: underline;
+        }
+        .detail {
+            font-size: 10px;
+            margin-top: 15px;
+        }
+        .thing,.money {
+            display: inline-block;
+        }
+        .thing {
+            font-weight: 700;
+            margin-left: 7px;
+        }
+        .money {
+            margin-left: 5px;
+            color: #ff8500;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="../img/捕获.PNG" alt="">
+    <p class="apprase">
+        快递牛，整体不错蓝牙可以说使秒连，小米给力
+    </p>
+    <div class="personapprise">
+        来自与 1999929991的评价
+    </div>
+    <div class="detail">
+        <span class="thing">Redmi AirDots真无限蓝</span>
+        <span class="money">99.99元</span>
+    </div>
+</div>
+<div class="box">
+    <img src="../img/捕获.PNG" alt="">
+    <p class="apprase">
+        快递牛，整体不错蓝牙可以说使秒连，小米给力
+    </p>
+    <div class="personapprise">
+        来自与 1999929991的评价
+    </div>
+    <div class="detail">
+        <span class="thing">Redmi AirDots真无限蓝</span>
+        <span class="money">99.99元</span>
+    </div>
+</div>
+<div class="box">
+    <img src="../img/捕获.PNG" alt="">
+    <p class="apprase">
+        快递牛，整体不错蓝牙可以说使秒连，小米给力
+    </p>
+    <div class="personapprise">
+        来自与 1999929991的评价
+    </div>
+    <div class="detail">
+        <span class="thing">Redmi AirDots真无限蓝</span>
+        <span class="money">99.99元</span>
+    </div>
+</div>
+<div class="box">
+    <img src="../img/捕获.PNG" alt="">
+    <p class="apprase">
+        快递牛，整体不错蓝牙可以说使秒连，小米给力
+    </p>
+    <div class="personapprise">
+        来自与 1999929991的评价
+    </div>
+    <div class="detail">
+        <span class="thing">Redmi AirDots真无限蓝</span>
+        <span class="money">99.99元</span>
+    </div>
+</div>
+</body>
+</html>
