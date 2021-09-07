@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span,div {
+            float: left;
+            background-color: pink;
+            height: 200px;
+            width: 200px;
+        }
+        p {
+            background-color: purple;
+            height: 300px;
+            float: right;
+        }
+        /*行内元素不需要转换为行内块元素，只要设置浮动那么他们都具有行内块元素的特点，可以设置宽高。*/
+        /*块级元素如果不设置宽度则宽度默认和父元素一样宽，但是你设置浮动之后它就会根据内容来指定宽度*/
+    </style>
+</head>
+<body>
+<span>1</span>
+<span>2</span>
+<div>div</div>
+<p>ppp</p>
+</body>
+</html>
