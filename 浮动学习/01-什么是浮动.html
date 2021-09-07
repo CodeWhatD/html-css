@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            float属性用于创建浮动框，将其移动到一边，直到左边缘或者右边缘触及包含块或另一个浮动框的边缘
+            如果有两个块级元素想排列到一行那么需要浮动，这时候第一个块浮动到左边然后第二块会找上一个浮动块的边缘挨着
+        */
+        /*
+            浮动特性
+                1.脱离了标准流，这个盒子不再占有之前的位置，而是漂浮起来了。
+                2,浮动的盒子不再占之前的位置，也就是说如果有两个div
+                  第一个div左浮动那么第二个div会到第一个div浮动之前的位置，因为第一个div浮动且脱离了标准流
+        */
+        .left {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            float: left;
+        }
+        .right {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div class="left">左青龙</div>
+<div class="right">右白虎</div>
+</body>
+</html>
