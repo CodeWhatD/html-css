@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 1200px;
+            height: 460px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+        .left {
+            float: left;
+            width: 240px;
+            height: 100%;
+            background-color: purple;
+        }
+        .right {
+            float: left;
+            width: 960px;
+            height: 100%;
+            background-color: silver;
+        }
+        /*大多数网页开发中，应该先搞一个标准流的父亲然后在里面用浮动来使子盒子一行中显示*/
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="left">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <div class="right">右面</div>
+</div>
+</body>
+</html>
