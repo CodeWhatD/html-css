@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+  <style>
+    .container {
+      height: 500px;
+      width: 800px;
+      margin: 0 auto;
+      background-color: pink;
+    }
+    .one {
+      height: 100px;
+      width: 100px;
+      background-color: darkgoldenrod;
+    }
+    .two {
+      float: left;
+      height: 100px;
+      width: 100px;
+      background-color: salmon;
+    }
+    .three {
+      height: 100px;
+      width: 100px;
+      background-color: navajowhite;
+    }
+    /*此练习考察的是，当父盒子中的第一div不去浮动而第二个div浮动会发生什么*/
+    /*第一个盒子不浮动那么就是标准流独占一行，第二个盒子浮动之后因为第一个是标准流所以独占一行，不会盖过标准流，那么第二个盒子会沿着第一个*/
+    /*盒子的下边浮动，然后脱离标准流，第三个盒子就会来到第二个盒子的地方*/
+    /*重点：浮动盒子只会影响后面的标准流前面的不会*/
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="one">大毛</div>
+  <div class="two">二的</div>
+  <div class="three">三德</div>
+</div>
+</body>
+</html>
