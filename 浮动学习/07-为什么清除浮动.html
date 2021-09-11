@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+  <style>
+    .container {
+      width: 500px;
+      margin: 0 auto;
+      background-color: pink;
+			overflow: hidden;
+    }
+    .one {
+      height: 100px;
+      width: 200px;
+      background-color: darkblue;
+      float: left;
+    }
+    .two {
+      float: left;
+      height: 100px;
+      width: 200px;
+      background-color: aquamarine;
+    }
+    .footer {
+      width: 500px;
+      height: 500px;
+      background-color: salmon;
+      margin: 0 auto;
+    }
+    /*当子元素都浮动的时候你父盒子没有高度那么这时候子盒子脱离了标准流那么父盒子就直接没有高度了*/
+    /*父盒子一定要给高度吗？如果是一篇文章字数有多有少，那么我们可以一开始就定死吗?我们希望父盒子中的子盒子来自动撑开父盒子*/
+
+
+    /*
+      清除浮动的方法
+        1.额外标签法，在浮动子盒子的最后一个盒子后面添加一个标签给一个类名在style中找到这个类名添加一个 clear:both 新增盒子必须是块级元素(只做了解)
+        		.clear {
+    						clear: both;
+    				}
+    		2.给父亲添加overflow
+    				.container {
+    					overflow:hidden
+    				}
+    				缺点：无法显示溢出元素
+    		3.:after 伪元素法 其实就是额外标签法 用为元素来实现
+    			.clearfix:after {
+    				content: ''
+    				display:block
+    				height:0
+    				clear:both
+    				visibility:hidden;
+    			}
+    			ie 6 7 专有 就是如果是这个版本就加上下面这个
+    			.clearfix {
+    				*zoom:1
+
+    				使用方法就是将 clearfix这个类名添加到父盒子上
+    			}
+    			4.双伪元素清除浮动 其实就是给面和后面都加一个元素 堵死
+    				.clearfix:before,.clearfix:after {
+    					content: ""
+    					display:table
+    				}
+    				.clearfix:after {
+    					clear:both
+    				}
+    				以下代码是照顾旧版本
+    				.clearfix {
+    					*zoom:1
+    				}
+    */
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="one">1</div>
+  <div class="two">2</div>
+	<div class="clear"></div>
+</div>
+<div class="footer">
+
+</div>
+</body>
+</html>
