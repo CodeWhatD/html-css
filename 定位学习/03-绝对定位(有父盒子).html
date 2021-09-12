@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+  <style>
+    .father {
+      width: 500px;
+      height: 500px;
+      background-color: skyblue;
+      position: relative;
+    }
+    .son {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      position: absolute;
+    }
+    .test {
+      width: 200px;
+      height: 200px;
+      background-color: lawngreen;
+    }
+    /*如果有爷爷盒子 父亲盒子没有相对定位爷爷有相对定位那么子盒子会以最近一级有相对定位的来*/
+
+  </style>
+</head>
+<body>
+<div class="father">
+  <div class="son"></div>
+  <div class="test">123</div>
+<!--  这个test盒子为了展示 绝对定位会脱离标准流-->
+</div>
+</body>
+</html>
