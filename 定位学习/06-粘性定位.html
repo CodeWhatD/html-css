@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+  <style>
+    body {
+      height: 3000px;
+    }
+    .staick {
+      /*粘性定位 该示例演示导航条怎么往下滚动的时候粘在浏览器窗口上方*/
+      position: sticky;
+      top: 0;
+      /*这里top:0就是当设置粘性定位的元素距离浏览器上方为0的时候就触发固定定位*/
+      width: 700px;
+      height: 200px;
+      background-color: pink;
+      margin: 70px auto;
+    }
+    /*以浏览器的可视窗口为参照来移动元素（固定定位特点）*/
+    /*粘性定位是占有之前的位置的不脱标*/
+    /*必须必须添加top right left bottom这种方位词才生效*/
+    /*兼容性一般 不兼容ie*/
+  </style>
+</head>
+<body>
+<div class="staick">
+
+</div>
+</body>
+</html>
