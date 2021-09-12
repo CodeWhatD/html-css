@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+  <style>
+    .w {
+      height: 2000px;
+      width: 1200px;
+      background-color: pink;
+      margin: 0 auto;
+    }
+    .close {
+      width: 100px;
+      height: 100px;
+      position: fixed;
+      left: 50%;
+      margin-left: 600px;
+    }
+		/*技巧：首先走浏览器的50% 也就是左偏移50，之后再margin-left走版心的一半*/
+		/*注意 定位的盒子写在版心的上面*/
+  </style>
+</head>
+<body>
+<div class="close">关闭</div>
+<div class="w"></div>
+</body>
+</html>
