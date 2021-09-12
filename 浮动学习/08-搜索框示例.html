@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .search {
+            width: 412px;
+            height: 42px;
+            background-color:#87ceeb;
+            /* float: left; */
+            margin: 50px auto;
+        }
+        .search input {
+            width: 345px;
+            height: 40px;
+            border: 1px solid #00a4ff;
+            border-right: 0;
+            columns: #bfbfbf;
+            font-size: 14px;
+            padding-left: 15px;
+            float: left;
+            /* padding会撑大盒子所以用宽度减去这个padding */
+        }
+        .search button {
+            width: 50px;
+            height: 42px;
+            background-color: blue;
+            /* button默认有个边框要去掉 */
+            /* 表单中的元素都是行内块元素所以行内块与行内块之间会有距离，所以button会掉下来因为那个缝隙加上
+            按钮的宽度超出了，所以挤下来了，我们应该浮动来解决 */
+            border: 0;
+            float: left;
+            background: url('../img/btn.png');
+        }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <input type="text" placeholder="输入关键词">
+        <button></button>
+    </div>
+</body>
+</html>
