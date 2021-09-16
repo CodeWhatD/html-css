@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+  <style>
+    .box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+    }
+    .one {
+      background-color: pink;
+      z-index: 1;
+    }
+    .two {
+      background-color: aquamarine;
+      top: 50px;
+      left: 50px;
+    }
+    .three {
+      background-color: salmon;
+      top: 100px;
+      left: 100px;
+    }
+    /*1.三个盒子如果没设置z-index默认最上面的是按照书写顺序谁最后一个谁再最上面 这里就是这个three盒子*/
+    /*z-index越大，离咱们的脸越近也就是越大就会压着z-index比它小的*/
+    /*这个定位盒子才有这个z-index*/
+  </style>
+</head>
+<body>
+<div>
+  <div class="box one">1</div>
+  <div class="box two">2</div>
+  <div class="box three">3</div>
+</div>
+</body>
+</html>
