@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .one {
+        width: 0;
+        height: 0;
+        /*三角本质就是边框来操作的，你只要把盒子设置为宽高都为0，然后你设置边框就可以了*/
+        border-top: 10px solid pink;
+        border-left: 10px solid black;
+        border-bottom: 10px solid aqua;
+        border-right: 10px solid darkgoldenrod;
+      }
+      .two {
+        /*实现一个左边的小三角*/
+        width: 0;
+        height: 0;
+        /*先设置四周的边框 都为透明的颜色*/
+        border: 10px solid transparent;
+        border-left: 10px solid pink;
+      }
+    </style>
+</head>
+<body>
+<div class="one"></div>
+<div class="two"></div>
+</body>
+</html>
