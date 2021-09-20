@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      div {
+        border: 1px solid red;
+        /*这样设置完成之后 你可以清除的看到图片与下边框之间是有一段距离的*/
+      }
+
+      /*解决办法1 推荐*/
+      img {
+        /*给图片设置 vertical-align top bottom middle 都行*/
+        vertical-align: bottom;
+      }
+      /*解决办法2 转换为块级元素 img { display: block}*/
+    </style>
+</head>
+<body>
+<div>
+  <img src="../img/pvp.png" alt="">1231312
+</div>
+</body>
+</html>
