@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      /*可以设置宽高了 行内元素*/
+      span {
+        position: absolute;
+        background-color: pink;
+        width: 100px;
+        height: 100px;
+        top: 300px;
+      }
+      div {
+        position: absolute;
+        background-color: skyblue;
+      }
+    </style>
+</head>
+<body>
+<!-- 1.行内元素本身不能设置宽高，但是如果你设置了position为固定或者绝对定位你那么就可以给宽高 -->
+<span>123</span>
+<!-- 2.块级元素如果设置了position的话，不设置宽高则会以内容的大小来显示宽高 -->
+<div>456</div>
+<!-- 3.脱标的盒子不会有外边距塌陷 -->
+</body>
+</html>
