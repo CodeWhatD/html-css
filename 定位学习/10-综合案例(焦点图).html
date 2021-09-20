@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .tb-image {
+            width: 700px;
+            height: 300px;
+            background-color: dimgray;
+            margin: 20px auto;
+            position: relative;
+        }
+        .tb-image img {
+            height: 100%;
+            width: 100%;
+        }
+        .tb-image .left {
+            position: absolute;
+            top: 135px;
+        }
+        .tb-image .right {
+            position: absolute;
+            top: 135px;
+            right: 10px;
+        }
+        .cur {
+            position: absolute;
+            left: 35%;
+            bottom: 20px;
+        }
+        .cur ul li {
+            float: left;
+            background-color: dimgray;
+            height: 7px;
+            width: 7px;
+            border-radius: 7px;
+            list-style: none;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="tb-image">
+    <span class="left"><</span>
+    <div class="cur">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <img src="../img/捕获.PNG" alt="">
+    <span class="right">></span>
+</div>
+</body>
+</html>
