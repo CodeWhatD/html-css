@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 盒子浮动的时候，盒子会紧紧的挨在一起，两个边框也会加在一起，这里边框设置为1那么俩盒子挨在一起之后会变成2
+        我们可以使用margin-left 为-1px 来解决这个问题 */
+        li {
+            float: left;
+            list-style: none;
+            width: 100px;
+            height: 300px;
+            border:1px solid black;
+            margin-left: -1px;
+        }
+        /* 代码的执行顺序会是 你先找到第一个li 然后给到这些样式，然后是第二个li然后再给样式 */
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>
