@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            /*只设置右边边框的颜色,剩下三个全部透明*/
+            border-color: transparent red transparent transparent;
+            border-style: solid;
+            /*边框大小只需要将上边框稍微大一点并且右边框正常大小，下左边框全为0即可*/
+            border-width: 100px 50px 0 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>
