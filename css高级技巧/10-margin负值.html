@@ -15,8 +15,17 @@
             height: 300px;
             border:1px solid black;
             margin-left: -1px;
+            position: relative;
         }
         /* 代码的执行顺序会是 你先找到第一个li 然后给到这些样式，然后是第二个li然后再给样式 */
+
+
+        /* 场景：经过盒子显示四周边框，但是你这里已经设置了-1的外边距导致你右边的边框会没有，所以我们设置z-index在
+        鼠标经过的时候提高z-index,并且你的所有盒子设置相对定位 */
+        li:hover {
+            border:1px solid green;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
