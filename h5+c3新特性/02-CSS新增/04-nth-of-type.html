@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    nth-of-type 与 nth-child区别：我们在真正开发中不一定一个ul中全部是li很整齐，一定有别的元素，这种情况你想用nth-child来选中-->
+<!--    是不可能的了看下面这个例子-->
+    <style>
+      ul li:nth-child(1){
+        /*它会先看这个nth-child(1) 先找到p标签 然后才是li 这时候发现你找到的是一个P标签但是你又要找li这时候样式不会生效*/
+      }
+      /*nth-of-type 的使用*/
+      ul li:nth-of-type(1){
+        /*它会先看这个li 然后才是后面的nth-of-type(1) 也就是你找到li里面的第一个*/
+        color: #e74c3c;
+      }
+
+    </style>
+
+</head>
+<body>
+<ul>
+  <p>1231</p>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li>10</li>
+</ul>
+</body>
+</html>
