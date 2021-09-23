@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      /*盒子的padding和border都会撑开盒子，以前我们还要减去它们，但是css3中出现了一个box-sizing：border-box解决了这个问题*/
+      div {
+        /*
+          box-sizing值：
+            content-box：这个就是正常的盒子模型，会被撑开
+            border-box:这个值不会撑开盒子(除非你的border和padding加一块大于盒子)
+        */
+        box-sizing: border-box;
+      }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
