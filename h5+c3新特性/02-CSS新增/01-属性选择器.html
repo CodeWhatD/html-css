@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input[name] {
+            /*input这个标签只要有name这个属性就会被选取*/
+            color: skyblue;
+        }
+        input[type='search'] {
+            /*input标签 只有标签的属性type值为search时才会被选中*/
+            color: #ff8500;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<!--1.只要有这个属性就会选择-->
+<input type="text" name="text">
+<input type="text">
+<!--2.key-value的形式-->
+<input type="search">
+<input type="reset">
+<!--3.开头，结尾，包含-->
+<!--开头:标签名[class^="abc"] 以abc开头的类名都会被选中-->
+<!--结尾:标签名[class$="abc"] 以abc结尾的类名会被选中-->
+<!--包含:标签名[class*="abc"] 只要类名中包含abc就会被选中-->
+
+<!--4.权重问题-->
+<!--标签名[class^="abc"] 以这个为例子 这里权重为11 [class^="abc"] 这里为10 那个标签为1 加起来11-->
+</body>
+</html>
