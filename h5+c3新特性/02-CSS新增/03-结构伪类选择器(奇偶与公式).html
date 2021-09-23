@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      /*选中所有的偶数行   */
+      ol li:nth-child(even) {
+        color: #e74c3c;
+      }
+      /*选中所有的奇数行*/
+      ol li:nth-child(odd) {
+        color: skyblue;
+      }
+      /*公式 这里注意括号里面必须时n这个字母，并且n是从0开始的，如果公式超出了那么就直接略过去，第0个没有元素所以n为0是选中第0个孩子但是没有*/
+      /*下面这个例子就是所有的li都会被选中 因为n是从0到结束*/
+      ol li:nth-child(n)
+    </style>
+</head>
+<body>
+<ol>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li>10</li>
+</ol>
+</body>
+</html>
