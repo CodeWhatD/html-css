@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .clearfix::after {
+            content: '';
+            height: 0;
+            clear: both;
+            display: block;
+            /*清除浮动那么 那个用来闭合的元素必须是块级元素*/
+            visibility: hidden;
+        }
+
+        /*强化写法*/
+        .clearfix::before,.clearfix::after {
+            content: '';
+            /*解释一下这个table 因为我们要用两个元素 一前一后的闭合住中间的浮动元素所以我们需要两个块级元素，如果你都是block那么会before元素和*/
+            /*after元素会两行显示，所以我们使用table，这就代表他们俩是这一行里的两个单元格*/
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class="clearfix"></div>
+</body>
+</html>
