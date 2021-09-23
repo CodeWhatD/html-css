@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      @font-face {
+        font-family: 'icomoon';
+        src:  url('../../css高级技巧/iconfont测试/fonts/icomoon.eot?h3ptzr');
+        src:  url('../../css高级技巧/iconfont测试/fonts/icomoon.eot?h3ptzr#iefix') format('embedded-opentype'),
+        url('../../css高级技巧/iconfont测试/fonts/icomoon.ttf?h3ptzr') format('truetype'),
+        url('../../css高级技巧/iconfont测试/fonts/icomoon.woff?h3ptzr') format('woff'),
+        url('../../css高级技巧/iconfont测试/fonts/icomoon.svg?h3ptzr#icomoon') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+      }
+      div {
+        width: 200px;
+        height: 50px;
+        border: 1px solid red;
+        position: relative;
+      }
+      div::after {
+        font-family: 'icomoon', serif;
+        font-size: 30px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        content: '';
+      }
+
+      /*我们不需要单独给字体图片一个i标签 只要用这种伪类选择器来实现就行了 这也html结构会很简单*/
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
