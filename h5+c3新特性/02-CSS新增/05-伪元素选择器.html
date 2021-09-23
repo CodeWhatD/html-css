@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*before和after创建一个元素，属于行内元素*/
+        /*新创建的元素在文档中是找不到的*/
+        /*语法：element::after element::before*/
+        /*before和after必须又content属性*/
+        /*before是在父元素内容之前after反之*/
+        /*伪元素和标签选择器一样，权重是1*/
+
+        /*案例*/
+        div::before{
+            /*元素::before*/
+            content: "我";
+            color: #e74c3c;
+            font-size: 19px;
+        }
+        div::after {
+            /*元素::after*/
+            content: "奥特曼";
+            color: skyblue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    是
+</div>
+</body>
+</html>
