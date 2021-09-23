@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*transition:要过度的属性 花费时间 运动曲线 何时开始*/
+        /*谁来过度给谁加transition*/
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /*1.给宽度添加过度效果 持续1s 曲线为ease就是从快到慢*/
+            /*transition: width 1s ease;*/
+            /*2.如果你宽高都想实现过度的话 用逗号来隔开*/
+            /*transition: width 1s ease,height 1s ease;*/
+            /*3.如果多个属性全要这种过度 直接使用all即可*/
+            transition: all 1s;
+        }
+        div:hover {
+            width: 500px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
