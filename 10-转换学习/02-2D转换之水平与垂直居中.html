@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /*translate 中的参数可以是百分比的机制*/
+        /*如果是百分比，那么会移动自身盒子的宽度或者高度*/
+        position: absolute;
+        left: 50%;
+        transform:translate(-50%,-50%) ;
+        top: 50%;
+
+        /*对行内元素是无效的！！！！！*/
+      }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
