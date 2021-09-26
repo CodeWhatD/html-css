@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            transition: all 1s;
+            /*1.用中心点设置方位名词*/
+            /*transform-origin: left bottom;*/
+            /*2.可以设置像素值来确定 默认是50% 50% 等价与 center center*/
+            transform-origin: 50px 50px;
+        }
+        div:hover {
+            transform: rotate(360deg);
+        }
+
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
