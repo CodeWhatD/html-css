@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 200px auto;
+            /*设置中心点*/
+            transform-origin: left bottom;
+        }
+        div:hover {
+            /*1.两个参数 默认是 1，1 也就是原来就是1，1，修改为2，2就是宽高都放大了两倍*/
+            /*transform: scale(2,2);*/
+            /*2.简便写法就是只写一个2 那么就是宽高都放大两倍*/
+            /*transform: scale(2);*/
+            /*3.缩小的话就是.几 0.5,0.5 就是缩小一半 写一个0.5就是简便写法*/
+            /*transform: scale(0.5);*/
+            /*4.优势：1.不会影响其他的盒子。2.可以设置中心点*/
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<p>123111111</p>
+</body>
+</html>
