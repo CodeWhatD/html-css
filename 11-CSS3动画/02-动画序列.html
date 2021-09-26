@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*可以做多个状态的变化*/
+        /*里面的百分比是整数*/
+        /*里面的百分比就是总的时间的比例 比如你设置的持续时间是10S那么25%就是2.5*/
+        @keyframes move {
+            25% {
+                transform: translate(1000px,0);
+            }
+            50% {
+                transform: translate(1000px,500px);
+            }
+            75% {
+                transform: translate(0,500px);
+            }
+            100% {
+                transform: translate(0,0);
+            }
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            animation-name: move;
+            animation-duration: 10s;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
