@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*定义一个动画器*/
+        @keyframes move {
+            0% {
+                transform: translate(0px);
+            }
+            100%{
+                transform: translateX(1000px);
+            }
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color:purple;
+            /*动画名称*/
+            animation-name: move;
+            /*动画持续时间*/
+            animation-duration: 2s;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
