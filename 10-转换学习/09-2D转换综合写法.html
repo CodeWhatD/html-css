@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transition: all 1s;
+        }
+        div:hover {
+            /*简便写法可以将多个转换效果写在一起 并且用空格进行隔开*/
+            /*需要注意的是，效果是有顺序的它会从前往后执行并且会影响后面的效果*/
+            /*注意：如果有位移和旋转之类的 先把位移放在前面*/
+            transform: translate(100px,100px) rotate(45deg) scale(1.2);
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
