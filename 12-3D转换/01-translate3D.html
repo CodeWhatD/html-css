@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Title</title>
   <style>
+    body {
+      /*3D要配合这个视距来显示的，也就是我们眼镜到这个图像之间的距离 视距越大就是离得远了看到的物体也就小了*/
+      /*perspective 是以px来结尾的*/
+      perspective: 500px;
+    }
     div {
       width: 200px;
       height: 200px;
@@ -15,7 +20,7 @@
 
       /*简写*/
       /*和上面那个是一样的*/
-      transform: translate3d(100px,100px,100px);
+      transform: translate3d(500px,100px,300px);
     }
   </style>
 </head>
