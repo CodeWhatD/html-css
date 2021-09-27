@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div {
+        font-size: 20px;
+        height: 30px;
+        width: 200px;
+        background-color: pink;
+        animation: move 5s steps(10);
+        /* steps(10) 代表这个动画分十步来完成 5s就是5除以10 共五秒来完成这个动画 */
+        overflow: hidden;
+    }
+    @keyframes move {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 200px;
+        }
+    }
+</style>
+<body>
+<div>谁动了我的小饼干啊啊</div>
+</body>
+</html>
