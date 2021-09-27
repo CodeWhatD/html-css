@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .bear {
+        width: 200px;
+        height: 100px;
+        background-color: #edeef0;
+        background-image: url("../img/bear.png");
+        background-repeat: no-repeat;
+        /*利用steps来实现 对背景图片位置的操作 background-position*/
+        /*用逗号分割开不同的动画*/
+        animation: move 1s steps(8) infinite,poll 3s forwards;
+        position: absolute;
+      }
+      @keyframes move {
+        0%{}
+        100% {
+          background-position: -1600px;
+        }
+      }
+      @keyframes poll {
+        0%{
+          left: 0;
+        }
+        100%{
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+</head>
+<body>
+<div class="bear"></div>
+</body>
+</html>
