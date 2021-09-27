@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      body {
+        perspective: 700px;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        position: relative;
+        perspective: 700px;
+        /*transform-style 要给你要保持3D空间效果的父盒子进行添加 和perspective一样 值为flat时就是默认不开启3D空间*/
+        transform-style: preserve-3d;
+        transition: all 1.5s;
+      }
+      .box div:first-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: pink;
+      }
+      .box div:last-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: springgreen;
+        transform: rotateX(45deg);
+      }
+      .box:hover {
+        transform: rotateX(360deg);
+      }
+    </style>
+</head>
+<body>
+<div class="box">
+  <div></div>
+  <div></div>
+</div>
+</body>
+</html>
