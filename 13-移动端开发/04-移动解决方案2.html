@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minmum-scale=1.0">
+    <style>
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+      input[type="button"] {
+          -webkit-appearance: none;
+      }
+      /*禁止长按页面时弹出菜单*/
+      img,a {
+          -webkit-touch-callout: none;
+      }
+    </style>
+</head>
+<body>
+<!--清除移动端点击a标签后面会出现一个蓝色背景-->
+<a href="#">点击</a>
+
+<!--清除ios默认给input类型为button的样式 这也才可以自定义-->
+<input type="button" value="按钮">
+
+<!--以上这些可以直接复制到初识化 css文件中使用-->
+</body>
+</html>
