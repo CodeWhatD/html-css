@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            border: 2px solid springgreen;
+            background-image: url("../img/pvp.png");
+            background-repeat: no-repeat;
+
+            /*1.background-size 宽度500px 高度200px*/
+            /*background-size: 500px 200px;*/
+
+            /*2.只设计宽度为500px的话 高度会等比例缩放*/
+            /*background-size: 500px;*/
+
+            /*3.background-size:contain 的意思是如果 宽度先拉满了那么就停止拉高度了;高度拉满了就停止拉宽度了 这也会造成空白区域*/
+            /*background-size: contain;*/
+
+            /*4.background-size:cover; 宽高都铺满*/
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
