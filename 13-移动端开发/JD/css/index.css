@@ -1,0 +1,203 @@
+* {
+  /*点击高亮清除*/
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  /*默认是会给按钮输入框一个默认的样式，我们清除了就可以自定义了*/
+  -webkit-appearance: none;
+}
+a,img{
+  /*禁止长按弹出*/
+  -webkit-touch-callout: none;
+}
+body {
+  width: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-family: -apple-system,Haettenschweiler,sans-serif;
+  color: #666;
+  line-height: 1.5;
+}
+img {
+  /* 清除图片底部的空白缝隙 */
+  vertical-align: top;
+}
+a {
+  color: #666666;
+  text-decoration: none;
+}
+.app {
+  height: 45px;
+}
+.app ul {
+  /*清除ul 的内外边距*/
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.app ul li {
+  float: left;
+  background-color: #333333;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  color: #ffffff;
+}
+.app ul li:nth-child(1) {
+  width: 8%;
+}
+.app ul li:nth-child(1) img{
+  width: 10px;
+  vertical-align: middle;
+}
+.app ul li:nth-child(2) {
+  width: 10%;
+}
+.app ul li:nth-child(2) img{
+  width: 30px;
+  /*这里注意一下 图片默认与文字的基线对其，一定要记住，想居中就设置下面这行*/
+  vertical-align: middle;
+}
+.app ul li:nth-child(3) {
+  width: 57%;
+}
+
+.app ul li:nth-child(4) {
+  width: 25%;
+  background-color: #F63515;
+}
+
+/* 搜索模块 */
+.search-wrap {
+  height: 44px;
+  position: fixed;
+  /*这里防止一下盒子塌陷 因为search块要margin-top*/
+  overflow: hidden;
+  width: 100%;
+  min-width: 320px;
+  max-width: 640px;
+}
+/*左侧按钮*/
+.search-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 44px;
+}
+/*左侧伪元素图标*/
+.search-btn:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 18px;
+  background-size: 20px 18px;
+  margin: 14px 0 0 15px;
+  background-image: url('../images/s-btn.png');
+}
+/*中间搜索框*/
+.search {
+  height: 30px;
+  margin: 0 50px;
+  border-radius: 15px;
+  background-color: #fcfcfc;
+  margin-top: 7px;
+  position: relative;
+}
+/*中间部分京东小图标*/
+.jd-pre {
+  width: 20px;
+  height: 15px;
+  background: url("../images/jd.png");
+  background-size: 20px 15px;
+  position: absolute;
+  top: 8px;
+  left: 13px;
+}
+/*小图标右边的竖线*/
+.jd-pre::after {
+  content: '';
+  width: 1px;
+  height: 15px;
+  display: block;
+  background-color: #cccccc;
+  position: absolute;
+  right: -8px;
+  top: 0;
+}
+/*放大镜 这里用二倍精灵图做法*/
+.sou {
+  position: absolute;
+  top: 8px;
+  left: 50px;
+  width: 18px;
+  height: 15px;
+  /*解释一下底下，我们想要精灵图缩小一半，缩小一半之后再定位到那个小图，所以先要将background-size设置为*/
+  /*以前精灵图整个图的一半，再通过这个一半找那个图的坐标*/
+  background: url("../images/jd-sprites.png") no-repeat -81px 0;
+  background-size: 200px auto;
+}
+/*右侧登录*/
+.search-login {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 44px;
+  color: #fff;
+  line-height: 44px;
+}
+
+/*焦点图*/
+.slider img{
+  width: 100%;
+}
+
+/* 蔡康图三个链接 */
+.brand {
+  border-radius: 10px 10px 0 0 ;
+  overflow: hidden;
+}
+.brand div {
+  float: left;
+  width: 33.33%;
+}
+
+.brand div a img {
+  width: 100%;
+}
+/*导航栏*/
+nav a {
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+nav a img {
+  width: 40px;
+  margin: 10px 0;
+}
+nav a span {
+  display: block;
+}
+
+/*新闻模块*/
+.news {
+  width: 100%;
+}
+.news a {
+  float: left;
+  /*使用c3盒子模型 设置border不会撑开盒子*/
+  box-sizing: border-box;
+}
+.news a img {
+  width: 100%;
+}
+.news a:nth-child(1) {
+  width: 50%;
+}
+.news a:nth-child(n+2) {
+  width: 24%;
+  border-left: 1px solid #bfbfbf;
+}
