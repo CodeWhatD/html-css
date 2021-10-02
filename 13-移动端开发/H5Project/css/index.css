@@ -1,0 +1,233 @@
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma,"Lucida Grande",Verdana,"Microsoft YaHei UI",STXihei,"Microsoft YaHei UI", serif, Arial;
+    color: #222;
+    background: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.search-index {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    /*固定定位不会以父亲为准而是以浏览器窗口为准，所以这里宽度和最大最小宽度都要单独设置*/
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    max-width: 540px;
+    min-width: 320px;
+    height: 44px;
+    width: 100%;
+    /*background-color: pink;*/
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.search {
+    position: relative;
+    flex: 1;
+    height: 26px;
+    border: 1px solid #ccc;
+    margin: 7px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #cccccc;
+    /*这个line-height 要注意 因为我们使用了c3盒子 所以承载文字的区域是要减去边框的 因为边框也算在了盒子不能像以前一样line-height直接和盒子一样高*/
+    line-height: 24px;
+    padding-left: 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+/*放大镜*/
+.search::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: 5px;
+    background: url("../images/sprite.png") no-repeat -59px -279px;
+    background-size: 104px auto;
+}
+.user {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    font-size: 12px;
+    color: #2eaaea;
+    text-decoration: none;
+}
+.user::before {
+    content: '';
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url("../images/sprite.png") no-repeat -59px -194px;
+    background-size: 104px auto;
+    margin: 5px auto -2px;
+}
+
+/*焦点图*/
+.focus img{
+    padding-top: 44px;
+    width: 100%;
+}
+
+/*局部导航*/
+.local-nav {
+    display: flex;
+    height: 64px;
+    background-color: #fff;
+    margin: 3px 4px ;
+    border-radius: 8px;
+}
+.local-nav li {
+    flex: 1;
+}
+.local-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #222;
+}
+.local-nav-icon {
+    width: 32px;
+    height: 32px;
+    margin-top: 8px;
+    background: url("../images/localnav_bg.png") no-repeat 0 0 ;
+    background-size: 32px auto;
+}
+/*主导航*/
+nav {
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0 4px 3px;
+}
+nav .common {
+    height: 88px;
+    background-color: pink;
+    display: flex;
+}
+.common:nth-child(2) {
+    margin: 3px 0;
+}
+.common .item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.common .item a {
+    text-align: center;
+    line-height: 44px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    text-shadow: 1px 1px rgba(0,0,0,.2);
+}
+.common .item a:nth-child(1) {
+    border-bottom: 1px solid #ffffff;
+}
+.common .item:nth-child(1) a {
+    border: 0;
+}
+.common .item:nth-child(1) {
+    border: 0;
+    background: url("../images/hotel.png") no-repeat bottom center;
+    background-size: 121px auto;
+}
+.common .item:nth-child(-n+2){
+    border-right: 1px solid #fff;
+}
+.common {
+    background: -webkit-linear-gradient(left,#FA5A55,#FA994D);
+}
+.subnav-entry {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 4px;
+    padding: 5px 0;
+}
+.subnav-entry  li {
+    flex: 20%;
+}
+
+.subnav-entry li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3px;
+    text-decoration: none;
+    color: #0f0f0f;
+}
+.subnav-entry .subnav-entry-icon {
+    width: 28px;
+    height: 28px;
+    background: url("../images/subnav-bg.png") no-repeat;
+    background-size: 28px auto;
+}
+/*热卖模块*/
+.sales-box {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin: 4px;
+}
+.sale-box {
+    position: relative;
+}
+.sales-box .sale-box a h1 {
+    text-indent: -999px;
+    position: relative;
+    overflow: hidden;
+}
+.sale-box h1::after {
+    content: '';
+    position: absolute;
+    width: 79px;
+    height: 15px;
+    top: 10px;
+    left: 15px;
+    background: url("../images/hot.png") no-repeat 0 -20px;
+    background-size: 80px auto;
+}
+.more {
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    background: -webkit-linear-gradient(left,#FF506C,#FF6BC6);
+    border-radius: 15px;
+    padding: 3px 20px 3px 10px;
+    color: #ffffff;
+}
+.more::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+.sale-bd {
+    display: flex;
+}
+.sale-bd a {
+    flex: 1;
+}
+.sale-bd a img {
+    width: 100%;
+}
+.sale-bd a:nth-child(1) {
+    border-right: 1px solid #eee;
+}
