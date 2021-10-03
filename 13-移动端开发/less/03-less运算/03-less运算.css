@@ -1,0 +1,8 @@
+html {
+  font-size: 12px;
+}
+div {
+  width: 82rem / 12px;
+  height: 82rem / 12px;
+  font-size: 20px;
+}

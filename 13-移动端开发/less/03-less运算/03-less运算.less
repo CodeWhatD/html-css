@@ -1,0 +1,11 @@
+@baseFont:12px;
+// less 运算符号左右两边必须有空格，必须！！！
+html {
+    font-size: @baseFont;
+}
+div {
+    width: 82rem / @baseFont;
+    height: 82rem / @baseFont;
+    // 这里注意 如果运算符左右单位不一致，则以左面的单位为准 所以这里的单位是rem
+    font-size: 32px - @baseFont;
+}
