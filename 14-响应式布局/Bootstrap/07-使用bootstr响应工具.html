@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    这句话的意思就是以ie的最高版本的内核来渲染页面-->
+    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <title>Title</title>
+    <style>
+        .container .row>div {
+            border: 1px solid black;
+            background-color: pink;
+            height: 70px;
+        }
+        span {
+            font-size: 50px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+<!--            只在大屏的时候显示这个span-->
+            <div class="col-md-3 visible-lg">
+                <span>我想显示</span>
+            </div>
+<!--            在中屏与小屏的时候隐藏该元素-->
+            <div class="col-md-3 hidden-md hidden-sm">2</div>
+            <div class="col-md-3">3</div>
+            <div class="col-md-3">4</div>
+        </div>
+    </div>
+</body>
+</html>
