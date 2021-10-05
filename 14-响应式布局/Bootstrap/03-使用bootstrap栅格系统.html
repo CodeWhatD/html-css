@@ -7,16 +7,31 @@
     <!--    这句话的意思就是以ie的最高版本的内核来渲染页面-->
     <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
     <title>Title</title>
+    <style>
+        .container .row:nth-child(1) {
+            border: 1px solid pink;
+        }
+        .container .row>div {
+            background-color: antiquewhite;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4">1</div>
-            <div class="col-lg-4">2</div>
-            <div class="col-lg-4">3</div>
+<!--        <div class="row">-->
+<!--            <div class="col-lg-4">1</div>-->
+<!--            <div class="col-lg-4">2</div>-->
+<!--            <div class="col-lg-4">3</div>-->
 <!--            相加等于12 则孩子正好占满屏幕-->
 <!--            相加小于12 则剩下的空间为空白显示-->
 <!--            相加大于12 则会另起一行显示-->
+<!--        </div>-->
+<!--        因为container 已经给我们写好了媒体查询了 所以我们可以通过给不同的类名使里面的孩子实现响应式布局-->
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">1</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">2</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">3</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">4</div>
         </div>
     </div>
 </body>
