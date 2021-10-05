@@ -1,0 +1,50 @@
+/* 手动修改container宽度 */
+@media screen and (min-width:1280px) {
+    .container {
+        width: 1280px;
+    }
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+.log {
+    background-color: #429ad9;
+}
+header .log {
+    padding-left: 0 !important;
+}
+/* 因为是响应式 要将图片改为父盒子的大小 跟着父盒子动 */
+header .log img {
+    width: 100%;
+}
+
+/* 导航 */
+.nav {
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+}
+.nav a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 30px;
+    font-size: 16px;
+}
+.nav a:hover {
+    background-color: #fff;
+    color: #333;
+}
+/* 修改字体图标的位置以及和右边文字的距离 */
+.nav a::before {
+    vertical-align: middle;
+    padding-right: 5px;
+}
