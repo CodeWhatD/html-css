@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
     <style>
       body {
@@ -10,7 +10,7 @@
       .map {
         width: 750px;
         height: 700px;
-        background:url("../img/map.png") no-repeat;
+        background: url('../img/map.png') no-repeat;
         margin: 100px auto;
         position: relative;
       }
@@ -28,7 +28,7 @@
         right: 0;
       }
       /*这里用到了 类选择器中的正则搜索  开头是pluse*/
-      .city [class^="pluse"] {
+      .city [class^='pluse'] {
         /*我们需要将盒子层叠起来所以将position设置为absolute 脱标*/
         position: absolute;
         width: 8px;
@@ -37,12 +37,11 @@
         border-radius: 50%;
         top: 4px;
         left: -4px;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         animation: plous 1.2s linear infinite;
       }
       @keyframes plous {
         0% {
-
         }
         70% {
           width: 40px;
@@ -62,15 +61,15 @@
         animation-delay: 0.8s !important;
       }
     </style>
-</head>
-<body>
-  <div class="map">
-    <div class="city">
-      <div class="dotted"></div>
-      <div class="pluse1"></div>
-      <div class="pluse2"></div>
-      <div class="pluse3"></div>
+  </head>
+  <body>
+    <div class="map">
+      <div class="city">
+        <div class="dotted"></div>
+        <div class="pluse1"></div>
+        <div class="pluse2"></div>
+        <div class="pluse3"></div>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

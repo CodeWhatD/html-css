@@ -43,8 +43,8 @@
     					overflow:hidden
     				}
     				缺点：无法显示溢出元素
-    		3.:after 伪元素法 其实就是额外标签法 用为元素来实现
-    			.clearfix:after {
+    		3.::after 伪元素法 其实就是额外标签法 用为元素来实现
+    			.clearfix::after {
     				content: ''
     				display:block
     				height:0
@@ -58,11 +58,11 @@
     				使用方法就是将 clearfix这个类名添加到父盒子上
     			}
     			4.双伪元素清除浮动 其实就是给面和后面都加一个元素 堵死
-    				.clearfix:before,.clearfix:after {
+    				.clearfix::before,.clearfix::after {
     					content: ""
     					display:table
     				}
-    				.clearfix:after {
+    				.clearfix::after {
     					clear:both
     				}
     				以下代码是照顾旧版本
