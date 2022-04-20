@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- 
+      掘金文章 https://juejin.cn/post/6888924266008412167#heading-10
+      tabindex的作用：可以设置聚焦的顺序或者设置不聚焦然后用JS聚焦 
+      tabindex 理论上可以用在几乎所有元素上，不管这个元素默认是当否支持聚焦
+
+      tabindex 有三个值：0，-N(通常是-1)，N(正值)
+
+      tabindex=0，该元素可以用tab键获取焦点
+      且访问的顺序是按照元素在文档中的顺序来focus，即使采用了浮动改变了页面中显示的顺序，依然是按照html文档中的顺序来定位
+
+      tabindex<=-1，该元素用tab键获取不到焦点，但是可以通过js获取
+      这样就便于我们通过js设置上下左右键的响应事件来focus
+      取值 -1~-999 之间没有区别，但为了可读性和一致性考虑，推荐使用 -1
+
+      tabindex>=1，该元素可以用tab键获取焦点，而且优先级大于tabindex=0
+      不过在tabindex>=1时，数字越小，越先定位到；
+      如果多个元素拥有相同的 tabindex ，他们的相对顺序按照他们在当前DOM中的先后顺序决定
+  -->
+		<!-- 例子１ 顺序：第三个 第四个 第一个 数字设置的越小越先来，负数就时不聚焦-->
+    <input></input>
+		<input tabindex="-1"></input>
+    <input tabindex="1"></input>
+    <input tabindex="2"></input>
+
+    <!-- 例子2 使用JS聚焦设置tabindex为负值的聚焦 -->
+    <input tabindex="-1" id="Ipt"></input>
+	</body>
+  <script>
+    const ipt = document.querySelector('#Ipt').focus()
+  </script>
+</html>
