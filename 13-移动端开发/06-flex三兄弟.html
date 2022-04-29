@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			[class^="container"] {
+				margin: 50px auto;
+			}
+			.container {
+				display: flex;
+				width: 500px;
+				height: 500px;
+				background-color: darkgray;
+			}
+			.one {
+				/* 如果同时设置了flex-basis和width 那么flex-basis会覆盖掉width */
+				flex-basis: 300px;
+				width: 200px;
+				height: 500px;
+				background-color: pink;
+			}
+
+			/* flex-grow 意思是当父盒子宽度大于子盒子之和时，子盒子可以设置此属性来分 */
+			.containerTwo {
+				display: flex;
+				width: 500px;
+				height: 300px;
+				border: 1px solid red;
+			}
+			.containerTwo .onec {
+				width: 200px;
+				height: 150px;
+				background-color: purple;
+				/* flex-grow: 1; 如果只是onec设置了1那么意味着它将占用盒子剩余所有部分 */
+				flex-grow: 1; /* 公式 1/(1+2)*剩余空间 这里剩余父盒子剩余了100=> 500-200-200 */
+			}
+			.containerTwo .two {
+				width: 200px;
+				height: 150px;
+				background-color: aqua;
+				flex-grow: 2; /* 公式 2/(1+2)*剩余空间 这里剩余父盒子剩余了100=> 500-200-200 */
+			}
+
+			.containerThree {
+				display: flex;
+				width: 500px;
+				height: 300px;
+				border: 10px solid red;
+			}
+			/* flex-shrink就是当子盒子宽度之和大于父盒子 那么要不要收缩的问题，这个值默认为1，如果都设置为0那么就会超过父盒子 */
+			.oen {
+				width: 200px;
+				background-color: aqua;
+				height: 150px;
+				/* flex-shrink: 0; 设置为0就是不收缩 */
+			}
+			.tne {
+				width: 400px;
+				height: 150px;
+				background-color: cadetblue;
+				/* flex-shrink: 0; */
+				flex-shrink: 1; /* 如果这样设置，那么.tne这个盒子就会缩小超过盒子宽度的所有，同理和flex-grow公式一样  */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="one"></div>
+		</div>
+		<div class="containerTwo">
+			<div class="onec"></div>
+			<div class="two"></div>
+		</div>
+		<div class="containerThree">
+			<div class="oen"></div>
+			<div class="tne"></div>
+		</div>
+	</body>
+</html>
