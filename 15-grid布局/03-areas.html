@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "sidebar content content"
+          "footer footer footer";
+        grid-template-rows: 1fr 2fr 1fr;
+      }
+      header {
+        background-color: aqua;
+        grid-area: header;
+      }
+      aside {
+        background-color: coral;
+        grid-area: sidebar;
+      }
+      main {
+        background-color: aquamarine;
+        grid-area: content;
+      }
+      footer {
+        background-color: blueviolet;
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>头部</header>
+      <aside>SideBar</aside>
+      <main>内容区域</main>
+      <footer>底部</footer>
+    </div>
+  </body>
+</html>
